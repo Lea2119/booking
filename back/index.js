@@ -13,7 +13,7 @@ dotenv.config();
 
 // Enable CORS middleware with options
 const corsOptions = {
-  origin: "https://deluxe-strudel-c69959.netlify.app",
+  origin: "https://64a194d8f8f8e6613cff44cc--deluxe-strudel-c69959.netlify.app",
   credentials: true,
 };
 
@@ -60,9 +60,7 @@ app.use((err, req, res, next) => {
 app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:5173",
-    "https://64a1909a0103a8672c4990ba--eclectic-rugelach-16ae8b.netlify.app",
-    "https://64a19341de74515ae67bd900--glittering-pegasus-fbeb3b.netlify.app",
-    "https://deluxe-strudel-c69959.netlify.app"
+    "https://64a194d8f8f8e6613cff44cc--deluxe-strudel-c69959.netlify.app"
   ];
   const { origin } = req.headers;
 
