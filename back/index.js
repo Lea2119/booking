@@ -13,8 +13,8 @@ dotenv.config();
 
 // Enable CORS middleware with options
 const corsOptions = {
-  origin: "https://lea2119-booking-app.netlify.app/", // Allow requests from this origin
-  credentials: true, // Allow credentials (e.g., cookies, authorization headers)
+  origin: "https://64a17f5ff8f8e65589ff44dd--lea2119-booking-app.netlify.app",
+  credentials: true,
 };
 
 app.use(cors(corsOptions));
@@ -58,7 +58,10 @@ app.use((err, req, res, next) => {
 
 // Set the Access-Control-Allow-Origin header based on the requesting origin
 app.use((req, res, next) => {
-  const allowedOrigins = ["http://localhost:5173"];
+  const allowedOrigins = [
+    "http://localhost:5173",
+    "https://64a17f5ff8f8e65589ff44dd--lea2119-booking-app.netlify.app"
+  ];
   const { origin } = req.headers;
 
   if (allowedOrigins.includes(origin)) {
