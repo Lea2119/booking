@@ -19,7 +19,7 @@ const List = () => {
 
 
   const { data, loading, reFetch } = useFetch(
-    `http://localhost:8080/back/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
+    `https://booking-app-ag0s.onrender.com/back/hotels?city=${destination}&min=${min || 0}&max=${max || 999}`
   );
 
   

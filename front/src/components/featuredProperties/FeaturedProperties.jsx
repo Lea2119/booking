@@ -3,7 +3,7 @@ import './featuredProperties.css';
 import useFetch from '../../hooks/useFetch';
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch("http://localhost:8080/back/hotels/countByCity?cities=rome,berlin,london");
+  const { data, loading } = useFetch("https://booking-app-ag0s.onrender.com/back/hotels/countByCity?cities=rome,berlin,london");
 
   return (
     <div className="fp">

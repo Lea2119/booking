@@ -9,7 +9,7 @@ import { SearchContext } from "../../context/SearchContext";
 const Reserve =({setOPen, hotelId}) => {
 
     const [selectedRooms, setSelectedRooms] = useState([]);
-    const { data, loading, error } = useFetch(`http://localhost:8080/back/hotels/rooms/${hotelId}`);
+    const { data, loading, error } = useFetch(`https://booking-app-ag0s.onrender.com/back/hotels/rooms/${hotelId}`);
     const {dates} = useContext(SearchContext);
 
     const getDatesInRange = (startDate, endDate) => {

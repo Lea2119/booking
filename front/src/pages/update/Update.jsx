@@ -11,7 +11,7 @@ const Update = ({ inputs, title }) => {
   const [errorMessage, setErrorMessage] = useState(""); // New state variable
   const { user } = useContext(AuthContext);
   const id = user._id; 
-  const updateUrl = `http://localhost:8080/back/users/${id}`;
+  const updateUrl = `https://booking-app-ag0s.onrender.com/back/users/${id}`;
   console.log(updateUrl);
 
 

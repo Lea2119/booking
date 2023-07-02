@@ -4,7 +4,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { loading } = useFetch(
-    "http://localhost:8080/back/hotels/countByCity?cities=rome,berlin,london"
+    "https://booking-app-ag0s.onrender.com/back/hotels/countByCity?cities=rome,berlin,london"
   );
 
   // console.log(data);

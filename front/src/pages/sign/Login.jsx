@@ -24,7 +24,7 @@ const Login = ({ inputs, title }) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("http://localhost:8080/back/auth/login", credentials);
+      const res = await axios.post("https://booking-app-ag0s.onrender.com/back/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       navigate("/");
     } catch (err) {
