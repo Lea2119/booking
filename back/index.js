@@ -13,7 +13,7 @@ dotenv.config();
 
 // Enable CORS middleware with options
 const corsOptions = {
-  origin: "https://64a17f5ff8f8e65589ff44dd--lea2119-booking-app.netlify.app",
+  origin: "https://eclectic-rugelach-16ae8b.netlify.app/",
   credentials: true,
 };
 
@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:5173",
-    "https://64a17f5ff8f8e65589ff44dd--lea2119-booking-app.netlify.app"
+    "https://eclectic-rugelach-16ae8b.netlify.app/"
   ];
   const { origin } = req.headers;
 
