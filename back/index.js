@@ -13,7 +13,7 @@ dotenv.config();
 
 // Enable CORS middleware with options
 const corsOptions = {
-  origin: "https://flourishing-maamoul-583634.netlify.app",
+  origin: "https://lea2119-booking.netlify.app/",
   credentials: true,
 };
 
@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:5173",
-    "https://flourishing-maamoul-583634.netlify.app"
+    "https://lea2119-booking.netlify.app/"
   ];
   const { origin } = req.headers;
 
