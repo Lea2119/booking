@@ -13,7 +13,7 @@ dotenv.config();
 
 // Enable CORS middleware with options
 const corsOptions = {
-  origin: "https://64a17f5ff8f8e65589ff44dd--aquamarine-twilight-da64c1.netlify.app/", // Allow requests from this origin
+  origin: "https://lea2119-booking-app.netlify.app/", // Allow requests from this origin
   credentials: true, // Allow credentials (e.g., cookies, authorization headers)
 };
 
