@@ -3,7 +3,7 @@ import './featuredProperties.css';
 import useFetch from '../../hooks/useFetch';
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch("https://booking-app-ag0s.onrender.com/back/hotels/countByCity?cities=rome,berlin,london");
+  const { data, loading } = useFetch("/hotels?featured=true");
 
   return (
     <div className="fp">
@@ -11,10 +11,21 @@ const FeaturedProperties = () => {
         'Loading'
       ) : (
         <>
-          {Array.isArray(data) && data.map((count, index) => (
-            <div className="fpItem" key={index}>
-              <span className="fpName">City {index + 1}</span>
-              <span className="fpCount">{count}</span>
+          {Array.isArray(data) && data.map((item) => (
+            <div className="fpItem" key={item._id}>
+              <img
+                src={item.photos[0]}
+                alt=""
+                className="fpImg"
+              />
+              <span className="fpName">{item.name}</span>
+              <span className="fpCity">{item.city}</span>
+              <span className="fpPrice">Starting from ${item.cheapestPrice}</span>
+              {item.rating && (
+                <div className="fpRating">
+                  <span>{item.rating} Excellent</span>
+                </div>
+              )}
             </div>
           ))}
         </>
