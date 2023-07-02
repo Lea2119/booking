@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { FaFolderPlus } from 'react-icons/fa';
 import Navbar from "../../components/navbar/Navbar";
+import avatar from "../../assets/user.png"
 
 import "../new/new.css"; // Assuming this is the correct path to your CSS file
 
@@ -66,7 +67,7 @@ const New = ({ inputs, title }) => {
               src={
                 file
                   ? URL.createObjectURL(file)
-                  : require("../../assets/user.png").default
+                  : avatar
               }
               alt=""
             />
