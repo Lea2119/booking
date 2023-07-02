@@ -61,6 +61,7 @@ app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:5173",
     "https://lea2119-booking.netlify.app",
+    "http://localhost:5174", // Add your frontend origin URL here
   ];
   const { origin } = req.headers;
 

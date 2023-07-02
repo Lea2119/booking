@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import axios from "axios";
+import "../new/new.css";
 import { useNavigate } from "react-router-dom";
 import { FaFolderPlus } from 'react-icons/fa';
 import Navbar from "../../components/navbar/Navbar";
-import avatar from "../../assets/user.png"
-
-import "../new/new.css"; // Assuming this is the correct path to your CSS file
+import { useState } from "react";
+import axios from "axios";
+import avatar from "../../assets/user.png";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
@@ -28,19 +27,19 @@ const New = ({ inputs, title }) => {
     data.append("upload_preset", "upload");
     try {
       const uploadRes = await axios.post(
-        "https://back.cloudinary.com/v1_1/ddfkz42vp/image/upload",
+        "https://api.cloudinary.com/v1_1/ddfkz42vp/image/upload",
         data
       );
-
+  
       const { url } = uploadRes.data;
-
+  
       const newUser = {
         ...info,
         img: url,
       };
-
+  
       await axios.post("https://booking-app-ag0s.onrender.com/back/auth/register", newUser);
-      setShowMessage(true);
+      setShowMessage(true)
       setTimeout(() => {
         navigate("/"); // Redirect to the home page after a delay
       }, 2000); // Delay in milliseconds (2 seconds)
@@ -48,21 +47,22 @@ const New = ({ inputs, title }) => {
       console.log(err.message);
     }
   };
+  
 
   console.log(info);
-
+  
   return (
     <div className="new">
-      <Navbar />
+      <Navbar/>
       <div className="newContainer">
         <div className="bannerNew">
           <h2>{title}</h2>
         </div>
         <div className="bottomNew">
           <div className="uploadNew">
-            {showMessage && (
-              <div className="message">Account created! You can now log in.</div>
-            )}
+          {showMessage && (
+        <div className="message">Account created! You can now log in.</div>
+        )} 
             <img
               src={
                 file
@@ -71,9 +71,9 @@ const New = ({ inputs, title }) => {
               }
               alt=""
             />
-            <label htmlFor="file">
-              <FaFolderPlus className="icon" style={{ width: "24px", height: "24px", color: "#003B95" }} />
-            </label>
+               <label htmlFor="file">
+                <FaFolderPlus className="icon" style={{ width: "24px", height:"24px", color:"#003B95" }} />
+                </label>
           </div>
 
           <div className="formNew">
