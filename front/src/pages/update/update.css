@@ -1,0 +1,80 @@
+.new {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+    .top {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      color: #003B95;
+    }
+    .updateBottom {
+      height: 100%;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+        .updateBottom img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+
+        .wrapperImage {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 30px;
+          width: 100%;
+        }
+
+          .formInput {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+          }
+
+            input {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 300px;
+              padding: 10px 40px;
+              border: 1px solid black;
+            }
+    
+          .uButton {
+            width: 360px;
+            padding: 10px 30px;
+            border: none;
+            background-color: #146CE4;
+            font-weight: bold;
+            color: white;
+  
+          }
+
+
+.error {
+  height: 20px;
+  width: 300px;
+  background-color: blue;
+}

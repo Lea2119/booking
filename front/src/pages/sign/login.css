@@ -1,0 +1,79 @@
+.new {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+      .top {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      color: #003B95;
+    }
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      margin: 20px;
+    }
+
+        .bottom img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 30px;
+        }
+
+          .formInput {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           gap: 30px;
+          }
+        
+
+            input {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 30px;
+              border: 1px solid black;
+            }
+
+            .registerContainer {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 50%;
+              text-align: center;
+            }
+            
+            .registerContainer hr {
+              flex-grow: 1;
+              height: 0.5;
+              background-color: grey;
+            }
+            
+            .registerContainer span {
+              padding: 20px;
+            }
+    
+          .fButton{
+            width: 210px;
+            padding: 10px 30px;
+            border: none;
+            background-color: #146CE4;
+            font-weight: bold;
+            color: white;
+  
+          }
+
+
